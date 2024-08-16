@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City game</title>
+    <link rel="stylesheet" href="css/main.css" />
+    
+    <script src="js/scripts.js"></script>
+  </head>
+  <!-- 1 -->
+  <body onload="load()">
+    
+    <header>
+      
+      <div
+        id="first_header"
+        class="button-start"
+      >
+        Введите свои имена
+      </div>
+      
+      <div id="second_header">
+        Игра началась!
+      </div>
+    </header>
+    
+    <div id="first_div">
+      
+      <div class="user_name_input">
+        
+        <div
+          id="first_name_error"
+          class="name_error"
+        >
+          Имя не должно быть пустым!
+        </div>
+        
+        <input
+          type="text"
+          class="custom-made-button"
+          id="first_name"
+        />
+        
+        <input
+          type="button"
+          class="custom-made button_submit"
+          onclick="set_name('first_name')"
+          value="Сохранить имя"
+          id="first_name_button"
+        />
+      </div>
+      
+      <div class="user_name_input">
+        
+        <div
+          id="second_name_error"
+          class="name_error"
+        >
+          Имя не должно быть пустым!
+        </div>
+        
+        <input
+          type="text"
+          class="custom-made-button"
+          id="second_name"
+        />
+        
+        <input
+          type="button"
+          class="custom-made button_submit"
+          onclick="set_name('second_name')"
+          value="Сохранить имя"
+          id="second_name_button"
+        />
+      </div>
+    </div>
+   <!-- 2 -->
+    <div id="second_div">
+      
+      <div
+        id="step_announce"
+      ></div>
+      
+      <div
+        id="last_city"
+      >
+        <div>Последний город:&nbsp;</div>
+        <div id="last_city_name"></div>
+      </div>
+      
+      <div class="city_block">
+        
+        <div
+          class="error_text"
+          id="player_error"
+        ></div>
+
+        
+        <input
+          type="text"
+          class="custom-made city_field"
+          id="player_answer"
+        />
+        
+        <input
+          type="button"
+          class="custom-made1"
+          onclick="check_city()"
+          value="Ввести город"
+          id="player_button"
+        />
+      </div>
+      <div class="user_result_block">
+        
+        <div>
+          
+          <div
+            id="first_name_display"
+          ></div>
+          
+          <div id="first_name_count"></div>
+          
+          <input
+            type="button"
+            class="custom-button"
+            onclick="give_up('first')"
+            value="Сдаться"
+            id="first_name_giveup"
+          />
+        </div>
+        
+        <div>
+          
+          <div
+            id="second_name_display"
+          ></div>
+          
+          <div id="second_name_count"
+          ></div>
+          
+          <input
+            type="button"
+            class="custom-button"
+            onclick="give_up('second')"
+            value="Сдаться"
+            id="second_name_giveup"
+          />
+        </div>
+      </div>
+    </div>
+   
+    <div id="third_div">
+      
+      <div id="congrats"></div>
+      
+      <div id="score"></div>
+      <!-- 3 -->
+      <input
+        type="button"
+        class="button-new-game"
+        onclick="start_new()"
+        value="Новая игра"
+      />
+    </div>
+  </body>
+</html>
